@@ -2,24 +2,25 @@ import React, { useCallback } from "react";
 import { Graphics } from '@inlet/react-pixi';
 import * as PIXI from "pixi.js";
 
-const CELL_BORDER_WIDTH = 1;
-
 interface CanvasCellProps {
   x: number,
   y: number,
-  width: number,
-  height: number
+  size: number,
   color: number,
 };
 
-const CanvasCell: React.FC<CanvasCellProps> = ({x, y, width, height, color}) => {
+const CanvasCell: React.FC<CanvasCellProps> = ({x, y, size, color}) => {
+  const CELL_BORDER_WIDTH = 1;
+
+  const SCALE = 1;
+
   const draw = useCallback((g: PIXI.Graphics) => {
     g.clear();
-    g.lineStyle(CELL_BORDER_WIDTH, color);
-    g.drawRect(x, y, width, height);
-  }, [x, y, width, height, color]);
+    g.lineStyle(CELL_BORDER_WIDTH / SCALE, color);
+    g.drawRect(x, y, size, size);
+  }, [x, y, size, color]);
 
-  return <Graphics draw={draw}/>;
+  return <Graphics draw={draw} scale={SCALE}/>;
 }
 
 export default CanvasCell;
