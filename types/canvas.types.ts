@@ -1,3 +1,3 @@
-export interface CanvasPosition {
+export interface CameraProperties {
   zoom: number,
 }
