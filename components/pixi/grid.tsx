@@ -1,5 +1,4 @@
-import React, { useCallback } from 'react';
-import { Graphics } from '@inlet/react-pixi';
+import React from 'react';
 import CanvasCell from './cell';
 
 interface GridCellProps {

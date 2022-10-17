@@ -7,7 +7,6 @@ const useCanvasCamera = (ref: React.RefObject<HTMLDivElement>) => {
     if (!Number.isInteger(e.deltaY)) {
       cameraStore.setZoom(e.deltaY);
     }
-    console.log(cameraStore.cameraProperties.zoom);
   }, []);
 
   useEffect(() => {

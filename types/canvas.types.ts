@@ -1,3 +1,3 @@
 export interface CameraProperties {
-  zoom: number,
+  zoom: number;
 }

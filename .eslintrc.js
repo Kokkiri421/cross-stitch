@@ -11,6 +11,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
+  plugins: ['prettier'],
   rules: {
     'react/function-component-definition': [
       2,
@@ -19,5 +20,6 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'prettier/prettier': 'error',
   },
 };
