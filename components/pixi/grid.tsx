@@ -1,5 +1,5 @@
 import React from 'react';
-import CanvasCell from './cell';
+import Cell from './Cell';
 
 interface GridCellProps {
   cols: number;
@@ -14,7 +14,7 @@ const CanvasGrid: React.FC<GridCellProps> = ({ cols, rows, size, scale }) => {
   return (
     <>
       {[...Array(cols * rows).keys()].map((i: number) => (
-        <CanvasCell
+        <Cell
           key={i}
           x={(i % cols) * size}
           y={Math.floor(i / cols) * size}

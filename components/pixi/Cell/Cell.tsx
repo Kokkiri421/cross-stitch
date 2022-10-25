@@ -10,7 +10,7 @@ interface CanvasCellProps {
   scale: number;
 }
 
-const CanvasCell: React.FC<CanvasCellProps> = ({
+export const Cell: React.FC<CanvasCellProps> = ({
   x,
   y,
   size,
@@ -30,5 +30,3 @@ const CanvasCell: React.FC<CanvasCellProps> = ({
 
   return <Graphics draw={draw} />;
 };
-
-export default CanvasCell;

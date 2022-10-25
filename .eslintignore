@@ -1,2 +1,4 @@
 .eslintrc.js
 next.config.js
+babel.config.js
+/stories

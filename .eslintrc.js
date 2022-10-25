@@ -7,6 +7,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
     project: './tsconfig.json',
@@ -21,5 +22,7 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'error',
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

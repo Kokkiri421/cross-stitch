@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import { CameraProperties } from '../types/canvas.types';
 
-const ZOOM_OPTIONS = {
+export const ZOOM_OPTIONS = {
   MIN: 0.5,
   START: 1,
   MAX: 3,
