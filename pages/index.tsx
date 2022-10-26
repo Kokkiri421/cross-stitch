@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
-  const CanvasComponent = dynamic(() => import('../components/canvas'), {
+  const CanvasComponent = dynamic(() => import('../components/pixi/Canvas'), {
     ssr: false,
   });
 

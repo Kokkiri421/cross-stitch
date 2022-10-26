@@ -1,5 +1,5 @@
 import React from 'react';
-import Cell from './Cell';
+import Cell from '../Cell';
 
 interface GridCellProps {
   cols: number;
@@ -8,7 +8,7 @@ interface GridCellProps {
   scale: number;
 }
 
-const CanvasGrid: React.FC<GridCellProps> = ({ cols, rows, size, scale }) => {
+export const Grid: React.FC<GridCellProps> = ({ cols, rows, size, scale }) => {
   const COLOR = 0x123123;
 
   return (
@@ -26,5 +26,3 @@ const CanvasGrid: React.FC<GridCellProps> = ({ cols, rows, size, scale }) => {
     </>
   );
 };
-
-export default CanvasGrid;

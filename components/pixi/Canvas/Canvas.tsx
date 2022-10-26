@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { Container, Stage } from '@inlet/react-pixi';
 import { observer } from 'mobx-react-lite';
-import CanvasGrid from './pixi/grid';
-import useCanvasCamera from '../hooks/useCanvasCamera';
-import cameraStore from '../stores/cameraStore';
+import Grid from '../Grid';
+import useCanvasCamera from '../../../hooks/useCanvasCamera';
+import cameraStore from '../../../stores/cameraStore';
 
-const CanvasComponent = observer(() => {
+export const Canvas = observer(() => {
   const ref = useRef<HTMLDivElement>(null);
   useCanvasCamera(ref);
 
@@ -27,7 +27,7 @@ const CanvasComponent = observer(() => {
             scale: cameraStore.cameraProperties.zoom,
           }}
         >
-          <CanvasGrid
+          <Grid
             cols={3}
             rows={3}
             size={20}
@@ -38,4 +38,3 @@ const CanvasComponent = observer(() => {
     </div>
   );
 });
-export default CanvasComponent;
