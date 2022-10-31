@@ -1,1 +1,1 @@
-*.svelte linguist-detectable=false
+*.* linguist-language=Typescript
