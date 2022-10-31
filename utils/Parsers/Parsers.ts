@@ -12,7 +12,7 @@ export function HexColor(hexString: string): number {
   if (isColor) {
     return hexString.length === 7
       ? Number(hexString.replace(/#/g, '0x'))
-      : Number(hexString.replace(/./g, '$&$&').substring(1).replace(/#/, '0x'));
+      : Number(hexString.replace(/[^#]/g, '$&$&').replace(/#/, '0x'));
   }
   throw new Error('Wrong string format');
 }
